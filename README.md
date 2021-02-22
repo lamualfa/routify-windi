@@ -22,7 +22,7 @@ yarn && yarn dev
 
 ## Demo
 
-See [routify-windi.netlify.app](https://routify-windi.netlify.app/).
+See [routify-windi.vercel.app](https://routify-windi.vercel.app/).
 
 <hr>
 
