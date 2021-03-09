@@ -1,28 +1,25 @@
 devDependencies:
   '@rollup/plugin-commonjs': 15.1.0_rollup@2.38.4
   '@rollup/plugin-node-resolve': 10.0.0_rollup@2.38.4
-  '@roxi/routify': 2.12.5
+  '@roxi/routify': 2.14.0
   cross-env: 7.0.3
   fs-extra: 9.1.0
   nollup: 0.13.13_rollup@2.38.4
   npm-run-all: 4.1.5
-  postcss: 8.2.4
-  postcss-import: 13.0.0_postcss@8.2.4
   rollup: 2.38.4
+  rollup-plugin-css-only: 3.1.0_rollup@2.38.4
   rollup-plugin-hot: 0.1.1_rollup@2.38.4
   rollup-plugin-inject-process-env: 1.3.1
   rollup-plugin-livereload: 2.0.0
-  rollup-plugin-svelte: 6.1.1_rollup@2.38.4+svelte@3.32.1
-  rollup-plugin-svelte-hot: 0.11.2_rollup@2.38.4+svelte@3.32.1
+  rollup-plugin-svelte: 6.1.1_rollup@2.38.4+svelte@3.35.0
+  rollup-plugin-svelte-hot: 0.11.2_rollup@2.38.4+svelte@3.35.0
   rollup-plugin-terser: 7.0.2_rollup@2.38.4
   rollup-plugin-workbox: 5.2.1_rollup@2.38.4
   spank: 1.5.2
   spassr: 2.2.0
-  svelte: 3.32.1
-  svelte-preprocess: 4.6.5_postcss@8.2.4+svelte@3.32.1
-  svelte-windicss-preprocess: 2.1.5
+  svelte: 3.35.0
+  svelte-windicss-preprocess: 2.3.1
   tossr: 1.3.1
-  windicss: 2.1.16
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.13:
@@ -1071,14 +1068,26 @@ packages:
       rollup: ^1.20.0||^2.0.0
     resolution:
       integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==
-  /@roxi/routify/2.12.5:
+  /@rollup/pluginutils/4.1.0_rollup@2.38.4:
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.2.2
+      rollup: 2.38.4
+    dev: true
+    engines:
+      node: '>= 8.0.0'
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    resolution:
+      integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==
+  /@roxi/routify/2.14.0:
     dependencies:
       '@roxi/ssr': 0.2.1
       '@types/node': 12.19.15
       chalk: 4.1.0
       cheap-watch: 1.0.3
       commander: 7.1.0
-      configent: 2.1.1
+      configent: 2.1.4
       esm: 3.2.25
       fs-extra: 9.1.0
       log-symbols: 3.0.0
@@ -1087,7 +1096,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-N+Bx+QwtS3ZQuGKLeXZ9G1XrBsx8FODjnCKgvblijDnn/YkWCb+uyKiRKPx4MWn30RWWbdSWlvKvgDxakqkBsA==
+      integrity: sha512-7hh/Nwp5uRgOGRee3/iMi40Nyc0oXxMYtpTTltfhFW/xISiXozEdRYJP7mav7IqjYgBZRJ4vIdeb1qN+aoL2bQ==
   /@roxi/ssr/0.2.1:
     dependencies:
       bufferutil: 4.0.3
@@ -1120,10 +1129,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
-  /@types/pug/2.0.4:
-    dev: true
-    resolution:
-      integrity: sha1-h3L80EGOPNLMFxVV1zAHQVBR9LI=
   /@types/resolve/0.0.8:
     dependencies:
       '@types/node': 14.14.22
@@ -1136,12 +1141,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==
-  /@types/sass/1.16.0:
-    dependencies:
-      '@types/node': 14.14.22
-    dev: true
-    resolution:
-      integrity: sha512-2XZovu4NwcqmtZtsBR5XYLw18T8cBCnU2USFHTnYLLHz9fkhnoEMoDsqShJIOFsFhn5aJHjweiUUdTrDGujegA==
   /abab/2.0.5:
     dev: true
     resolution:
@@ -1549,6 +1548,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TIYTcbTrSjMh6Yz0YrdXOJbQeuozC00lViKZ2Gq/y0Z3GwySQvFPiNzavqaM4dXZf23MmPF8x0MMPu47g9Id+Q==
+  /configent/2.1.4:
+    dependencies:
+      dotenv: 8.2.0
+    dev: true
+    resolution:
+      integrity: sha512-npqMOmVz5/bXjPa/hb15jL5FDf9PMVSvVI+EXFX4n1vRkht1eXUQjvX2seDcjAUN3G0bJCbjX4mrA7Zt+rPBwQ==
   /content-disposition/0.5.3:
     dependencies:
       safe-buffer: 5.1.2
@@ -1751,12 +1756,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
-  /detect-indent/6.0.0:
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
   /domexception/2.0.1:
     dependencies:
       webidl-conversions: 5.0.0
@@ -2714,12 +2713,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
-  /min-indent/1.0.1:
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -2746,13 +2739,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
-  /nanoid/3.1.20:
-    dev: true
-    engines:
-      node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1
-    hasBin: true
-    resolution:
-      integrity: sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
   /negotiator/0.6.2:
     dev: true
     engines:
@@ -3012,45 +2998,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-qQbW94hLHEqCg7nhby4yRC7G2+jYHY4Rguc2bjw7Uug4GIJuu1tvf2uHaZv5Q8zdt+WKJ6qK1FOI6amaWUo5FA==
-  /pify/2.3.0:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw=
   /pify/3.0.0:
     dev: true
     engines:
       node: '>=4'
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
-  /postcss-import/13.0.0_postcss@8.2.4:
-    dependencies:
-      postcss: 8.2.4
-      postcss-value-parser: 4.1.0
-      read-cache: 1.0.0
-      resolve: 1.19.0
-    dev: true
-    engines:
-      node: '>=10.0.0'
-    peerDependencies:
-      postcss: ^8.0.0
-    resolution:
-      integrity: sha512-LPUbm3ytpYopwQQjqgUH4S3EM/Gb9QsaSPP/5vnoi+oKVy3/mIk2sc0Paqw7RL57GpScm9MdIMUypw2znWiBpg==
-  /postcss-value-parser/4.1.0:
-    dev: true
-    resolution:
-      integrity: sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
-  /postcss/8.2.4:
-    dependencies:
-      colorette: 1.2.1
-      nanoid: 3.1.20
-      source-map: 0.6.1
-    dev: true
-    engines:
-      node: ^10 || ^12 || >=14
-    resolution:
-      integrity: sha512-kRFftRoExRVXZlwUuay9iC824qmXPcQQVzAjbCCgjpXnkdMCJYBu2gTwAaFBzv8ewND6O8xFb3aELmEkh9zTzg==
   /prelude-ls/1.1.2:
     dev: true
     engines:
@@ -3135,12 +3088,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-9WmIKF6mkvA0SLmA2Knm9+qj89e+j1zqgyn8aXGd7+nAduPoqgI9lO57SAZNn/Byzo5P7JhXTyg9PzaJbH73bA==
-  /read-cache/1.0.0:
-    dependencies:
-      pify: 2.3.0
-    dev: true
-    resolution:
-      integrity: sha1-5mTvMRYRZsl1HNvo28+GtftY93Q=
   /read-pkg/3.0.0:
     dependencies:
       load-json-file: 4.0.0
@@ -3305,6 +3252,17 @@ packages:
       rollup: '>=0.60.0 <3'
     resolution:
       integrity: sha512-Lek/TYp1+7g7I+uMfJnnSJ7YWoD58ajo6Oarhlex7lvUce+RCKRuGRSgztDO3/MF/PuGKmUL5iTHKf208UNszw==
+  /rollup-plugin-css-only/3.1.0_rollup@2.38.4:
+    dependencies:
+      '@rollup/pluginutils': 4.1.0_rollup@2.38.4
+      rollup: 2.38.4
+    dev: true
+    engines:
+      node: '>=10.12.0'
+    peerDependencies:
+      rollup: 1 || 2
+    resolution:
+      integrity: sha512-TYMOE5uoD76vpj+RTkQLzC9cQtbnJNktHPB507FzRWBVaofg7KhIqq1kGbcVOadARSozWF883Ho9KpSPKH8gqA==
   /rollup-plugin-hot-nollup/0.1.2_rollup@2.38.4:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.38.4
@@ -3344,15 +3302,15 @@ packages:
       node: '>=8.3'
     resolution:
       integrity: sha512-oC/8NqumGYuphkqrfszOHUUIwzKsaHBICw6QRwT5uD07gvePTS+HW+GFwu6f9K8W02CUuTvtIM9AWJrbj4wE1A==
-  /rollup-plugin-svelte-hot/0.11.2_rollup@2.38.4+svelte@3.32.1:
+  /rollup-plugin-svelte-hot/0.11.2_rollup@2.38.4+svelte@3.35.0:
     dependencies:
       require-relative: 0.8.7
       rollup: 2.38.4
       rollup-plugin-hot-nollup: 0.1.2_rollup@2.38.4
       rollup-pluginutils: 2.8.2
       sourcemap-codec: 1.4.8
-      svelte: 3.32.1
-      svelte-hmr: 0.11.6_svelte@3.32.1
+      svelte: 3.35.0
+      svelte-hmr: 0.11.6_svelte@3.35.0
     dev: true
     optionalDependencies:
       nollup: 0.13.13_rollup@2.38.4
@@ -3361,13 +3319,13 @@ packages:
       svelte: '>=3.19.0'
     resolution:
       integrity: sha512-3cQnFZlrQbknbEwtEwxC2TcT2HO3BYR4/9A/7Dfzm93sQ4lvyAYlCh4JS4FximrR1jWrI/mgaOtUKYDudGIkmg==
-  /rollup-plugin-svelte/6.1.1_rollup@2.38.4+svelte@3.32.1:
+  /rollup-plugin-svelte/6.1.1_rollup@2.38.4+svelte@3.35.0:
     dependencies:
       require-relative: 0.8.7
       rollup: 2.38.4
       rollup-pluginutils: 2.8.2
       sourcemap-codec: 1.4.8
-      svelte: 3.32.1
+      svelte: 3.35.0
     dev: true
     peerDependencies:
       rollup: '>=1.19.2'
@@ -3737,14 +3695,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
-  /strip-indent/3.0.0:
-    dependencies:
-      min-indent: 1.0.1
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
   /supports-color/5.5.0:
     dependencies:
       has-flag: 3.0.0
@@ -3769,78 +3719,28 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
-  /svelte-hmr/0.11.6_svelte@3.32.1:
+  /svelte-hmr/0.11.6_svelte@3.35.0:
     dependencies:
-      svelte: 3.32.1
+      svelte: 3.35.0
     dev: true
     peerDependencies:
       svelte: '>=3.19.0'
     resolution:
       integrity: sha512-XUYcp7W26q/fF8tABZfCYGklwL4TDH48gc1KOjuBQNlTiMW63l/+rRqmfVOE/qKG5vns0J2NPo3zFjdahkwoHA==
-  /svelte-preprocess/4.6.5_postcss@8.2.4+svelte@3.32.1:
+  /svelte-windicss-preprocess/2.3.1:
     dependencies:
-      '@types/pug': 2.0.4
-      '@types/sass': 1.16.0
-      detect-indent: 6.0.0
-      postcss: 8.2.4
-      strip-indent: 3.0.0
-      svelte: 3.32.1
-    dev: true
-    engines:
-      node: '>= 9.11.2'
-    peerDependencies:
-      '@babel/core': ^7.10.2
-      coffeescript: ^2.5.1
-      less: ^3.11.3
-      node-sass: '*'
-      postcss: ^7 || ^8
-      postcss-load-config: ^2.1.0
-      pug: ^3.0.0
-      sass: ^1.26.8
-      stylus: ^0.54.7
-      sugarss: ^2.0.0
-      svelte: ^3.23.0
-      typescript: ^3.9.5 || ^4.0.0
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      coffeescript:
-        optional: true
-      less:
-        optional: true
-      node-sass:
-        optional: true
-      postcss:
-        optional: true
-      postcss-load-config:
-        optional: true
-      pug:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      typescript:
-        optional: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-bVNq1seKfJlLKttWjhT55HBMz5WM8Ev5iidbu8qPD0B8+pHrsyg2QS2pZLQ6epU3GIKFfZzAlBQX+978GRHgkQ==
-  /svelte-windicss-preprocess/2.1.5:
-    dependencies:
-      chalk: 2.4.2
+      chalk: 4.1.0
       magic-string: 0.25.7
-      windicss: 2.1.14
+      windicss: 2.3.0
     dev: true
     resolution:
-      integrity: sha512-QyuE14rE+g2T1kRLH7UJ0mvc4HDCg79SC+VlcDJlAkuS1Ls7NIJMuvkvXz0sm6HSW4Rj/5YYw/fEECyTDxXg0g==
-  /svelte/3.32.1:
+      integrity: sha512-YuLxBE5C3D0hpJPtLgQP+MmgMzEkGNPmUN4eKHB6aQfkjyvNhQbx0xWuGrN++kVphFafZggRm5pmJnedgxHbmw==
+  /svelte/3.35.0:
     dev: true
     engines:
       node: '>= 8'
     resolution:
-      integrity: sha512-j1KmD2ZOU0RGq1/STDXjwfh0/eJ/Deh2NXyuz1bpR9eOcz9yImn4CGxXdbSAN7cMTm9a7IyPUIbuBCzu/pXK0g==
+      integrity: sha512-gknlZkR2sXheu/X+B7dDImwANVvK1R0QGQLd8CNIfxxGPeXBmePnxfzb6fWwTQRsYQG7lYkZXvpXJvxvpsoB7g==
   /symbol-tree/3.2.4:
     dev: true
     resolution:
@@ -4151,20 +4051,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
-  /windicss/2.1.14:
+  /windicss/2.3.0:
     dev: true
     engines:
       node: '>= 12'
     hasBin: true
     resolution:
-      integrity: sha512-qxsiUxH81yYI9StGSi/A9RVcbtNdMBgbxmBnt25p8pRbk+NSeRJTATA9/NSJOmxuvscc1NVq8BjaFCzILpKrkg==
-  /windicss/2.1.16:
-    dev: true
-    engines:
-      node: '>= 12'
-    hasBin: true
-    resolution:
-      integrity: sha512-nhKsjdLe8Tkf9oYFh+ZuNxo1N7PVQeRlbjePF+3F87Ti4/TD+EPH4TvAlepDMpQaDo0HqPD6h0oyTLp2ZZDhVQ==
+      integrity: sha512-OR/ULZmcVhtEJDIFnkz4S4v4efpZ8DuvDtzBwXNgbtiPQIxN0Zhpo59q0rfF0i3tfwjKw2KCQXNxL5E98bMuVA==
   /word-wrap/1.2.3:
     dev: true
     engines:
@@ -4357,14 +4250,13 @@ packages:
 specifiers:
   '@rollup/plugin-commonjs': ^15.0.0
   '@rollup/plugin-node-resolve': ^10.0.0
-  '@roxi/routify': ^2.12.5
+  '@roxi/routify': ^2.14.0
   cross-env: ^7.0.2
   fs-extra: ^9.0.1
   nollup: ^0.13.13
   npm-run-all: ^4.1.5
-  postcss: ^8.1.4
-  postcss-import: ^13.0.0
   rollup: ^2.33.1
+  rollup-plugin-css-only: ^3.1.0
   rollup-plugin-hot: ^0.1.1
   rollup-plugin-inject-process-env: ^1.3.1
   rollup-plugin-livereload: ^2.0.0
@@ -4374,8 +4266,6 @@ specifiers:
   rollup-plugin-workbox: ^5.2.1
   spank: ^1.5.1
   spassr: ^2.2.0
-  svelte: ^3.29.4
-  svelte-preprocess: ^4.5.2
-  svelte-windicss-preprocess: ^2.1.5
+  svelte: ^3.35.0
+  svelte-windicss-preprocess: ^2.3.1
   tossr: ^1.3.1
-  windicss: ^2.1.16

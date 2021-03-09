@@ -14,9 +14,9 @@ yarn && yarn dev
 
 ## Environment
 
-- Routify - `v2.12.5`
-- Windi CSS - `v2.1.14`
-- Svelte Windi Preprocess - `v2.1.5`
+- Routify - `v2.14.0`
+- Windi CSS - `v2.2.3`
+- Svelte Windi Preprocess - `v2.3.1`
 
 <hr>
 

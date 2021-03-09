@@ -10,6 +10,7 @@ import getConfig from '@roxi/routify/lib/utils/config';
 import { injectManifest } from 'rollup-plugin-workbox';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
 import { preprocess as windiPreprocess } from 'svelte-windicss-preprocess';
+import css from 'rollup-plugin-css-only';
 
 const { distDir } = getConfig(); // use Routify's distDir for SSOT
 const assetsDir = 'assets';
@@ -58,7 +59,6 @@ export default {
     svelte({
       dev: !production, // run-time checks
       // Extract component CSS — better performance
-      css: (css) => css.write(`bundle.css`),
       hot: isNollup,
       preprocess: windiPreprocess({
         config: './tailwind.config.js',
@@ -67,6 +67,9 @@ export default {
         globalPreflight: true,
         globalUtility: true,
       }),
+    }),
+    css({
+      output: 'bundle.css',
     }),
 
     // resolve matching modules from current working directory

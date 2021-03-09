@@ -26,12 +26,13 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
-    "@roxi/routify": "^2.12.5",
+    "@roxi/routify": "^2.14.0",
     "cross-env": "^7.0.2",
     "fs-extra": "^9.0.1",
     "nollup": "^0.13.13",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.33.1",
+    "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-hot": "^0.1.1",
     "rollup-plugin-inject-process-env": "^1.3.1",
     "rollup-plugin-livereload": "^2.0.0",
@@ -41,8 +42,8 @@
     "rollup-plugin-workbox": "^5.2.1",
     "spank": "^1.5.1",
     "spassr": "^2.2.0",
-    "svelte": "^3.29.4",
-    "svelte-windicss-preprocess": "^2.1.5",
+    "svelte": "^3.35.0",
+    "svelte-windicss-preprocess": "^2.3.1",
     "tossr": "^1.3.1"
   },
   "routify": {
