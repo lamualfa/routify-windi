@@ -1,6 +1,6 @@
 # routify-windi
 
-Use Windi CSS (_Next generation of Tailwind CSS compiler_) in Routify. What is Windi CSS? see [Windi CSS](https://github.com/windicss/windicss) for more informations.
+Use Windi CSS (_Next generation of Tailwind CSS compiler_) with Vite in Routify. What is Windi CSS? see [Windi CSS](https://github.com/windicss/windicss) for more informations.
 
 ## Installation
 
@@ -9,14 +9,6 @@ npx degit lamualfa/routify-windi project-name
 cd project-name
 yarn && yarn dev
 ```
-
-<hr>
-
-## Environment
-
-- Routify - `v2.14.0`
-- Windi CSS - `v2.2.3`
-- Svelte Windi Preprocess - `v2.3.1`
 
 <hr>
 
